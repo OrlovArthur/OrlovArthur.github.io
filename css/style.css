@@ -1,0 +1,860 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat-semibold-webfont.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat-extrabold-webfont.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #0044bb;
+    -webkit-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    transition: color .3s ease;
+}
+
+a:hover {
+    cursor: pointer;
+    color: red;
+}
+
+a:active {
+    cursor: pointer;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    font-family: 'montserrat', sans-serif;
+}
+
+body {
+    position: absolute;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+}
+
+.btn {
+    width: 200px;
+    height: 80px;
+    color: #fff;
+    font-size: 18px;
+    background-color: rgba(1, 1, 1, 0);
+    border: 2px solid rgb(61, 161, 255);
+    -webkit-box-shadow: 0px 5px 40px rgba(61, 161, 255, .9);
+            box-shadow: 0px 5px 40px rgba(61, 161, 255, .9);
+}
+
+.site__container {
+   width: 100vw;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/*header*/
+
+.header {
+    display: flex;
+    align-items: center;
+    -ms-flex-align: center;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    width: 100%;
+    height: 70px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    -ms-flex-align: center;
+}
+
+.header__btn {
+    width: 80px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 10px;
+    border: 2px solid #d9d9d9;
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+/*search*/
+.search {
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+
+.search__nav--list {
+    display: flex;
+}
+
+.search__nav--link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    color: #0044bb;
+}
+
+.search__nav--link:hover {
+    color: red;
+}
+
+.search__nav--link:active {
+    color: #333333;
+}
+
+.search__nav--item--text {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 2;
+    margin-top: 12px;
+}
+
+.search__form {
+    height: 68px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, .8);
+    border: 2px solid #fc0;
+    border-right: none;
+    display: flex;
+    margin-right: 18px;
+    margin-top: 20px;
+}
+
+.search__input {
+    height: 64px;
+    padding-left: 15px;
+    border: none;
+    border-right: 1px solid #dedede;
+}
+
+.search__btn--arrow {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    border: none;
+    border-right: 1px solid #dedede;
+    background-color: transparent;
+}
+
+.placeblock {
+    width: 250px;
+}
+
+.dateblock {
+    width: 150px;
+}
+
+.passblock {
+    width: 200px;
+}
+
+.search__btn,
+.search__btn-mob {
+    cursor: pointer;
+    position: relative;
+    background-color: #fc0;
+    border: none;
+    transition: background-color .2s;
+}
+
+.search__btn {
+    padding: 0 31px 0 34px;
+}
+
+.search__btn-mob {
+    height: 64px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.search__btn::after {
+    content: ''; 
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 116px;
+    right: 0;
+    bottom: 0;
+    border-width: 32px 0 32px 16px;
+    border-style: solid;
+    border-color: transparent transparent transparent #fc0;
+    transition: all .2s;
+}
+
+.search__btn:hover,
+.search__btn-mob:hover {
+    background-color: rgb(255, 180, 0);
+}
+
+.search__btn::after:hover {
+    border-color: rgb(255, 180, 0);
+}
+
+.search__form-mob {
+    display: none;
+}
+
+.search__block-mob {
+    border-radius: 4px;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px -4px rgb(13 35 67 / 15%), 0 0 2px rgb(13 35 67 / 30%);
+}
+
+.search__input-mob {
+    width: 88%;
+    height: 64px;
+    margin-left: 15px;
+    border: none;
+}
+
+.dateblock-mob {
+    display: flex;
+}
+
+.search__input-mob-date {
+    width: calc(48%);
+}
+
+.search__input-mob-date:not(:last-child) {
+    margin-right: 10px;
+}
+
+.mob-line {
+    border-bottom: 1px solid #dedede;
+}
+
+.search__sale {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px 20px 20px 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #fff;
+    background-color:rgb(106, 152, 252);
+}
+
+.number_percent {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.number {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.percent {
+    font-size: 36px;
+}
+
+.search__sale--text {
+    width: 495px;
+    color: #fff;
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+.search__img-block {
+    background-image: url(../img/sobor.jpeg);
+    background-position: center;
+    height: 110px;
+    width: 350px;
+    box-shadow: 0 10px 150px rgb(106, 152, 252) inset;
+}
+
+.search__img {
+    
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.rostur-logo {
+    width: 100px;
+    height: 25px;
+}
+
+.mir-logo {
+    color: #fff;
+    width: 40px;
+    height: 100%;
+}
+
+.search__info {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 32px;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 4px 12px -4px rgba(13,35,67,.15),0 0 2px rgba(13,35,67,.3);
+            box-shadow: 0 4px 12px -4px rgba(13,35,67,.15),0 0 2px rgba(13,35,67,.3);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.search__info--block {
+    flex: 0 0 240px;
+}
+
+.search__info--block--text {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.swiper-wrapper-375px {
+    display: none;
+}
+
+
+/*ticket*/
+.ticket {
+    height: 398px;
+    margin-bottom: 40px;
+}
+
+.ticket__container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.ticket__container--block {
+    flex: 1 1;
+}
+
+.ticket__container--block:not(:last-child) {
+    margin-right: 20px;
+}
+
+.block--content {
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow:0 0 0 200px rgba(0, 0, 0, 0.33) inset;
+}
+
+.block--content--from {
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    color: #d9d9d9;
+}
+
+.block--content--where,
+.block--content--price {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.block--content--where {
+    color: #fff;
+}
+
+.block--content--price {
+    color: #fc0;
+}
+
+.wide {
+    display: block;
+}
+
+.wide-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upper--block {
+    margin-bottom: 20px;
+}
+
+.sochi,
+.simfer,
+.piter,
+.moscowwide {
+    height: 160px;
+}
+
+.moscow {
+    height: 340px;
+    background: url(../img/moscow.jpg) no-repeat;
+}
+
+.sochi {
+    background: url(../img/sochi.jpg) no-repeat;
+}
+
+.simfer {
+    background: url(../img/simferopol.jpg) no-repeat;
+}
+
+.piter {
+    background: url(../img/piter.jpg) no-repeat;
+}
+
+.moscowwide {
+    background: url(../img/moscow2.jpg) no-repeat;
+}
+
+.ticket-wrapper {
+    width: 120px;
+    height: 200px;
+}
+
+/*guide*/
+.travel-option--guide {
+    display: flex;
+    height: 100%;
+}
+
+.travel--guide,
+.option--guide,
+.faq--guide,
+.popular--guide {
+    height: 100%;
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: 5px;
+    margin: 0;
+    box-shadow: 0 4px 12px -4px rgb(13 35 67 / 15%), 0 0 2px rgb(13 35 67 / 30%);
+}
+
+.popular--guide {
+    background-color: #e9ecef;
+    padding: 32px;
+}
+
+.travel--guide {
+    padding: 20px 32px 0 32px;
+    width: calc(66.66% + 5px);
+}
+
+.option--guide {
+    padding: 32px;
+    width: calc(33.33% - 10px);
+}
+
+.faq--guide {
+    padding: 32px;
+}
+
+.guide__text {
+    margin-bottom: 25px;
+}
+
+.guide__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.guide__item {
+    flex-basis: 50%;
+    margin-bottom: 25px;
+    list-style: none;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.option--guide__item {
+    font-weight: 700;
+}
+
+.option--guide__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.faq--guide {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin: 0;
+}
+
+.faq--guide__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.faq--guide__text {
+    margin-bottom: 0;
+}
+
+.popular--guide {
+    margin-bottom: 60px;
+}
+
+.popular--guide__h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.popular--guide__block {
+    display: flex;
+    margin-top: 30px;
+}
+
+.popular--guide__column {
+    width: 100%;
+}
+
+.popular--guide__column:not(:first-child) {
+    padding-left: 40px;
+    border-left: 1px solid #d9d9d9;
+}
+
+.popular--guide__column:not(:last-child) {
+    margin-right: 40px;
+}
+
+.popular--guide__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.popular--guide__line:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.line--price {
+    color: #999;
+    font-weight: 600;
+}
+
+.sale--guide {
+    display: flex;
+    justify-content: space-between;
+    background-color: #267eff;
+    border-radius: 5px;
+    color: #fff;
+    padding: 40px 80px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.sale--guide__block {
+    width: calc(50%);
+}
+
+.sale--guide__block:not(:last-child) {
+    margin-right: 20px;
+}
+
+.sale--guide__text {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sale--guide__form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sale--guide__copyrights {
+    font-size: 11px;
+    line-height: 14px;
+}
+
+.sale--guide__link {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.sale--guide__link:hover {
+    color: #d9d9d9;
+}
+
+.sale--guide__input {
+    width: 68%;
+    height: 40px;
+    padding-left: 12px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.sale--guide__btn {
+    width: 28%;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+     -webkit-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
+
+.sale--guide__btn:hover {
+    cursor: pointer;
+    background-color: #dedddb;
+}
+
+/*footer*/
+.footer {
+    margin-bottom: 30px;
+}
+
+.footer__content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    border-top: 1px solid #dedddb;
+}
+
+h5 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.footer__text {
+    font-size: 13px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__link {
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 12px;
+}
+
+.footer__link-img {
+    margin-right: 8px;
+}
+
+.footer__copiright {
+    font-size: 13px;
+    line-height: 20px;
+    display: flex;
+}
+
+/*MEDIS*/
+@media (max-width: 414px) {
+    .container {
+        min-width: 360px;
+        padding-left: 27px;
+        padding-right: 27px;
+        margin: 0;
+    }
+   
+    .search {
+        padding-top: 0;
+    }
+
+    .search__nav--link {
+        padding-right: 12px;
+    }
+
+    .search__form,
+    .search__img-block {
+        display: none;
+    }
+
+    .search__form-mob,
+    .travel-option--guide,
+    .popular--guide__block,
+    .sale--guide,
+    .sale--guide__form,
+    .footer__content {
+        display: block;
+    }
+
+    .search__sale {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .search__sale--text {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .travel--guide,
+    .option--guide,
+    .faq--guide,
+    .popular--guide,
+    .sale--guide {
+        padding: 20px;
+        width: 100%;
+    }
+   
+    .sale--guide__block,
+    .sale--guide__input,
+    .sale--guide__btn {
+        width: 100%;
+    }
+
+    .sale--guide__btn,
+    .sale--guide__input {
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .popular--guide__column:not(:first-child) {
+        padding-left: 0;
+        padding-top: 10px;
+        border-left: none;
+    }
+    
+    .popular--guide__column:not(:last-child) {
+        margin-right: 0;
+    }
+
+    h5 {
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .container {
+        min-width: 355px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .dateblock-mob {
+        width: 100%;
+    }
+
+    .swiper-wrapper-more375px,
+    .rostur-logo,
+    .mir-logo {
+        display: none;
+    }
+
+    .swiper-wrapper-375px {
+        display: block;
+    }
+
+    .search__info {
+        height: 360px;
+    }
+
+    .search__info--block {
+        flex: 0 0 280px;
+    }
+
+    .moscow,
+    .sochi,
+    .simfer,
+    .piter,
+    .moscowwide {
+        background-size: cover;
+        height: 200px;
+    }
+
+    .ticket {
+        height: 300px;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    .container {
+        min-width: 300px;
+    }
+
+    .search__info--block {
+        flex: 0 0 240px;
+    }
+
+    .search__nav--item--text {
+        font-size: 12px;
+    }
+}
